@@ -1,0 +1,1495 @@
+html{
+
+    scroll-behavior:smooth;
+
+}
+/* =========================================
+   RESET
+========================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#eef3f8;
+    color:#333;
+    overflow-x:hidden;
+}
+
+/* =========================================
+   HERO SECTION
+========================================= */
+
+.hero{
+    position:relative;
+    height:100vh;
+    background:linear-gradient(135deg,#041c32,#062b52,#0b3d67);
+    overflow:hidden;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+    color:white;
+}
+.hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:700px;
+
+    height:700px;
+
+    background:radial-gradient(circle,
+    rgba(0,174,255,.18) 0%,
+    transparent 70%);
+
+    top:-150px;
+
+    right:-100px;
+
+    z-index:0;
+
+}
+.hero::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:700px;
+
+    height:700px;
+
+    border-radius:50%;
+
+    background:radial-gradient(circle,
+    rgba(0,180,255,.15),
+    transparent 70%);
+
+    right:-200px;
+
+    top:-150px;
+
+}
+
+/* =========================================
+   NAVIGATION BAR
+========================================= */
+
+.navbar{
+
+    position:fixed;
+
+    top:25px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:92%;
+
+    max-width:1300px;
+
+    padding:18px 35px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    border-radius:50px;
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(12px);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    z-index:1000;
+
+}
+
+.logo{
+
+    font-size:28px;
+
+    font-weight:bold;
+
+    color:white;
+
+}
+
+.nav-links{
+
+    display:flex;
+
+    list-style:none;
+
+    gap:30px;
+
+}
+
+.nav-links a{
+
+    color:white;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.nav-links a:hover{
+
+    color:#7dd3fc;
+
+}
+
+/* =========================================
+   HERO CONTENT
+========================================= */
+
+.hero-content{
+
+    position:relative;
+
+    z-index:5;
+
+}
+
+.hero p{
+
+    font-size:20px;
+
+    opacity:.9;
+
+    margin-bottom:20px;
+
+}
+
+.hero h1{
+
+    font-size:72px;
+
+    margin-bottom:20px;
+
+}
+
+.hero h2{
+
+    color:#8fd3ff;
+
+    font-size:42px;
+
+    margin-bottom:40px;
+
+}
+
+/* =========================================
+   STATS
+========================================= */
+
+.stats{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:25px;
+
+    flex-wrap:wrap;
+
+}
+
+.stat{
+
+    background:rgba(255,255,255,.12);
+
+    padding:18px 30px;
+
+    border-radius:12px;
+
+    backdrop-filter:blur(8px);
+
+    transition:.4s;
+
+}
+
+.stat:hover{
+
+    transform:translateY(-8px);
+
+    background:rgba(255,255,255,.18);
+
+}
+
+.stat h3{
+
+    font-size:34px;
+
+    color:white;
+
+}
+
+.stat p{
+
+    color:#dbeafe;
+
+}
+
+/* =========================================
+   FLOATING CIRCLES
+========================================= */
+
+.circle{
+
+    position:absolute;
+
+    border-radius:50%;
+
+    background:rgba(0,195,255,.12);
+
+    animation:float 8s infinite ease-in-out;
+
+}
+
+.c1{
+
+    width:180px;
+
+    height:180px;
+
+    top:120px;
+
+    left:6%;
+
+}
+
+.c2{
+
+    width:120px;
+
+    height:120px;
+
+    right:10%;
+
+    top:180px;
+
+    animation-delay:2s;
+
+}
+
+.c3{
+
+    width:80px;
+
+    height:80px;
+
+    bottom:80px;
+
+    left:18%;
+
+    animation-delay:4s;
+
+}
+
+@keyframes float{
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-30px);
+
+    }
+
+}
+/* =========================================
+   SECTION TITLE
+========================================= */
+
+section{
+    padding:80px 10%;
+}
+
+section h2{
+    text-align:center;
+    font-size:40px;
+    color:#0b3d67;
+    margin-bottom:50px;
+}
+
+/* =========================================
+   ABOUT
+========================================= */
+
+#about{
+    max-width:1100px;
+    margin:auto;
+}
+
+.about-card{
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:20px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+
+    line-height:1.8;
+
+    font-size:18px;
+
+    transition:.4s;
+
+}
+
+.about-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+/* =========================================
+   EDUCATION
+========================================= */
+
+.education-container{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+
+    gap:30px;
+
+}
+
+.education-card{
+
+    background:white;
+
+    padding:35px;
+
+    border-radius:20px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+
+    transition:.4s;
+
+}
+
+.education-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.education-card h3{
+
+    color:#0b3d67;
+
+    margin-bottom:15px;
+
+}
+
+.education-card p{
+
+    color:#666;
+
+    line-height:1.8;
+
+}
+
+/* ================= SKILL CATEGORIES ================= */
+
+.skill-category{
+
+    margin-bottom:60px;
+
+}
+
+.skill-category h3{
+
+    color:#0b3d67;
+
+    font-size:28px;
+
+    margin-bottom:25px;
+
+    text-align:center;
+
+}
+
+.skills-container{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:18px;
+
+}
+
+.skill-card{
+
+    background:linear-gradient(135deg,#0b3d67,#1565c0);
+
+    color:white;
+
+    padding:16px 28px;
+
+    border-radius:50px;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    transition:.4s;
+
+    box-shadow:0 10px 20px rgba(0,0,0,.1);
+
+}
+
+.skill-card:hover{
+
+    transform:translateY(-8px) scale(1.05);
+
+    background:linear-gradient(135deg,#1565c0,#42a5f5);
+
+}
+/* =========================================
+   ACHIEVEMENTS
+========================================= */
+
+#achievements{
+    background:#f8fbff;
+}
+
+.stats{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    flex-wrap:wrap;
+    margin-top:40px;
+}
+
+.stat{
+    background:white;
+    width:220px;
+    padding:30px 20px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    transition:0.4s;
+}
+
+.stat:hover{
+    transform:translateY(-10px);
+    background:#0b3d67;
+}
+
+.stat h3{
+    font-size:40px;
+    color:#0b3d67;
+    margin-bottom:15px;
+}
+
+.stat:hover h3{
+    color:white;
+}
+
+.stat p{
+    color:#666;
+    font-size:17px;
+}
+
+.stat:hover p{
+    color:white;
+}
+/* =========================================
+   RESEARCH
+========================================= */
+
+#research{
+
+    background:#f8fbff;
+
+}
+
+.research-container{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+    gap:30px;
+
+    margin-top:40px;
+
+}
+
+.research-card{
+
+    background:white;
+
+    padding:35px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
+
+    transition:.4s;
+
+}
+
+.research-card:hover{
+
+    transform:translateY(-12px);
+
+}
+
+.research-icon{
+
+    font-size:55px;
+
+    margin-bottom:20px;
+
+}
+
+.research-card h3{
+
+    color:#0b3d67;
+
+    margin-bottom:18px;
+
+}
+
+.research-card p{
+
+    color:#555;
+
+    line-height:1.8;
+
+}
+/* =========================================
+   EXPERIENCE
+========================================= */
+
+#experience{
+    background:#f8fbff;
+}
+
+.experience-container{
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    gap:25px;
+    margin-top:40px;
+}
+
+.experience-card{
+    background:white;
+    border-radius:20px;
+    padding:25px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    transition:.4s;
+
+}
+
+.experience-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 20px 40px rgba(0,0,0,.15);
+}
+
+.experience-icon{
+    font-size:45px;
+    margin-bottom:15px;
+}
+
+.experience-card h3{
+    color:#0b3d67;
+    font-size:20px;
+    margin-bottom:10px;
+}
+
+.experience-card h4{
+    color:#1976d2;
+    margin-bottom:8px;
+    font-weight:600;
+}
+
+.experience-date{
+    display:inline-block;
+    background:#e3f2fd;
+    color:#0b3d67;
+    padding:6px 14px;
+    border-radius:20px;
+    font-size:14px;
+    font-weight:600;
+    margin-bottom:18px;
+}
+
+.experience-card p{
+    color:#555;
+    line-height:1.8;
+}
+@media (max-width:1200px){
+
+    .experience-container{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+@media (max-width:768px){
+
+    .experience-container{
+        grid-template-columns:1fr;
+    }
+
+}
+/* =========================================
+   CERTIFICATIONS
+========================================= */
+
+#certifications{
+    background:#ffffff;
+}
+
+.certificate-container{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+    margin-top:40px;
+}
+
+.certificate-card{
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+    transition:.4s;
+
+}
+
+.certificate-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 20px 40px rgba(0,0,0,.15);
+
+}
+
+.certificate-icon{
+
+    font-size:50px;
+
+    margin-bottom:18px;
+
+}
+
+.certificate-card h3{
+
+    color:#0b3d67;
+
+    margin-bottom:10px;
+
+}
+
+.certificate-card h4{
+
+    color:#1976d2;
+
+    margin-bottom:15px;
+
+}
+
+.certificate-card p{
+
+    color:#555;
+
+    margin-bottom:20px;
+
+    line-height:1.6;
+
+}
+
+.certificate-card a{
+
+    display:inline-block;
+
+    text-decoration:none;
+
+    color:white;
+
+    background:#0b3d67;
+
+    padding:10px 22px;
+
+    border-radius:30px;
+
+    transition:.3s;
+
+}
+
+.certificate-card a:hover{
+
+    background:#1976d2;
+
+}
+/* =========================================
+   CONTACT
+========================================= */
+
+#contact{
+    background:#eef6fc;
+}
+
+.contact-container{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:25px;
+
+    margin-top:40px;
+
+}
+
+.contact-card{
+
+    background:white;
+
+    padding:35px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+    transition:.4s;
+
+}
+
+.contact-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 20px 40px rgba(0,0,0,.15);
+
+}
+
+.contact-icon{
+
+    font-size:45px;
+
+    margin-bottom:18px;
+
+}
+
+.contact-card h3{
+
+    color:#0b3d67;
+
+    margin-bottom:15px;
+
+}
+
+.contact-card p{
+
+    color:#555;
+
+}
+
+.contact-card a{
+
+    text-decoration:none;
+
+    color:#1565c0;
+
+    font-weight:bold;
+
+}
+
+.contact-card a:hover{
+
+    color:#0b3d67;
+
+}
+/* =========================================
+   FOOTER
+========================================= */
+
+footer{
+
+    background:#041c32;
+
+    color:white;
+
+    text-align:center;
+
+    padding:60px 20px;
+
+}
+
+.footer-content h3{
+
+    font-size:32px;
+
+    margin-bottom:15px;
+
+}
+
+.footer-content p{
+
+    color:#cfd8dc;
+
+    margin-bottom:20px;
+
+}
+
+.footer-links{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:30px;
+
+    margin:30px 0;
+
+}
+
+.footer-links a{
+
+    color:white;
+
+    text-decoration:none;
+
+    transition:.3s;
+
+}
+
+.footer-links a:hover{
+
+    color:#64b5f6;
+
+}
+
+.copyright{
+
+    margin-top:35px;
+
+    font-size:15px;
+
+    color:#90a4ae;
+
+}
+/* ==========================
+   SCROLL TO TOP BUTTON
+========================== */
+
+#topBtn{
+
+    position:fixed;
+
+    bottom:30px;
+
+    right:30px;
+
+    width:50px;
+
+    height:50px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#0b3d67;
+
+    color:white;
+
+    font-size:22px;
+
+    cursor:pointer;
+
+    display:none;
+
+    transition:.4s;
+
+    z-index:999;
+
+}
+
+#topBtn:hover{
+
+    background:#1976d2;
+
+    transform:scale(1.1);
+
+}
+body{
+
+    cursor:default;
+
+}
+
+a,
+button,
+.skill-card,
+.stat,
+.research-card,
+.experience-card,
+.certificate-card{
+
+    transition:.3s;
+
+}
+.stat:hover,
+.skill-card:hover,
+.research-card:hover,
+.experience-card:hover,
+.certificate-card:hover,
+.contact-card:hover{
+
+    transform:translateY(-12px) scale(1.03);
+
+}
+/* =========================================
+   FLOATING MOLECULES
+========================================= */
+
+.molecule{
+
+    position:absolute;
+
+    font-size:40px;
+
+    opacity:0.25;
+
+    animation:float 8s ease-in-out infinite;
+
+    pointer-events:none;
+
+}
+
+.molecule1{
+
+    top:15%;
+
+    left:8%;
+
+}
+
+.molecule2{
+
+    top:70%;
+
+    left:12%;
+
+    animation-delay:2s;
+
+}
+
+.molecule3{
+
+    top:20%;
+
+    right:10%;
+
+    animation-delay:4s;
+
+}
+
+.molecule4{
+
+    top:65%;
+
+    right:8%;
+
+    animation-delay:6s;
+
+}
+
+@keyframes float{
+
+    0%{
+
+        transform:translateY(0px) rotate(0deg);
+
+    }
+
+    50%{
+
+        transform:translateY(-25px) rotate(20deg);
+
+    }
+
+    100%{
+
+        transform:translateY(0px) rotate(0deg);
+
+    }
+
+}
+/* =========================================
+   DNA ANIMATION
+========================================= */
+
+.dna-left,
+.dna-right{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+    z-index:0;
+}
+
+.dna-left{
+    left:30px;
+}
+
+.dna-right{
+    right:30px;
+}
+
+.dna-left span,
+.dna-right span{
+
+    width:18px;
+    height:18px;
+
+    border-radius:50%;
+
+    background:#4fc3f7;
+
+    box-shadow:0 0 12px #4fc3f7;
+
+    animation:dnaMove 2s ease-in-out infinite alternate;
+
+}
+
+.dna-left span:nth-child(even),
+.dna-right span:nth-child(even){
+
+    background:#81d4fa;
+
+    animation-delay:.5s;
+
+}
+
+@keyframes dnaMove{
+
+    from{
+
+        transform:translateX(-12px);
+
+    }
+
+    to{
+
+        transform:translateX(12px);
+
+    }
+
+}
+/* =========================================
+   PREMIUM DNA HELIX
+========================================= */
+
+.dna{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    z-index:0;
+    opacity:.5;
+}
+
+.dna-left{
+    left:30px;
+}
+
+.dna-right{
+    right:30px;
+}
+
+.strand{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.strand span{
+
+    width:18px;
+    height:18px;
+
+    margin:8px 0;
+
+    border-radius:50%;
+
+    background:#4fc3f7;
+
+    box-shadow:0 0 15px #4fc3f7;
+
+    position:relative;
+
+    animation:helix 2s ease-in-out infinite alternate;
+
+}
+
+.strand span:nth-child(even){
+
+    background:#81d4fa;
+
+    animation-delay:.5s;
+
+}
+
+.strand span::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:60px;
+
+    height:2px;
+
+    background:#64b5f6;
+
+    left:-21px;
+
+    top:8px;
+
+    opacity:.5;
+
+}
+
+@keyframes helix{
+
+    from{
+
+        transform:translateX(-18px) scale(.8);
+
+    }
+
+    to{
+
+        transform:translateX(18px) scale(1.2);
+
+    }
+
+}
+/* ======================================
+   SCIENTIFIC FLOATING ICONS
+====================================== */
+
+.science-icons{
+
+    position:absolute;
+
+    inset:0;
+
+    pointer-events:none;
+
+    z-index:0;
+
+}
+
+.science-icon{
+
+    position:absolute;
+
+    width:60px;
+
+    opacity: 13;;
+
+    filter:drop-shadow(0 0 15px rgba(90,170,255,.5));
+
+}
+
+/* Positions */
+
+.dna1{
+
+    top:12%;
+
+    left:5%;
+
+    animation:float1 10s ease-in-out infinite;
+
+}
+
+.atom1{
+
+    top:70%;
+
+    left:8%;
+
+    animation:float2 9s ease-in-out infinite;
+
+}
+
+.flask1{
+
+    top:18%;
+
+    right:8%;
+
+    animation:float3 11s ease-in-out infinite;
+
+}
+
+.micro1{
+
+    bottom:12%;
+
+    right:5%;
+
+    animation:float4 10s ease-in-out infinite;
+
+}
+
+/* Animations */
+
+@keyframes float1{
+
+0%,100%{
+transform:translateY(0) rotate(0deg);
+}
+
+50%{
+transform:translateY(-35px) rotate(12deg);
+}
+
+}
+
+@keyframes float2{
+
+0%,100%{
+transform:translateY(0);
+}
+
+50%{
+transform:translateY(30px) rotate(-15deg);
+}
+
+}
+
+@keyframes float3{
+
+0%,100%{
+transform:translateX(0);
+}
+
+50%{
+transform:translateX(-30px) rotate(20deg);
+}
+
+}
+
+@keyframes float4{
+
+0%,100%{
+transform:translateY(0);
+}
+
+50%{
+transform:translateY(-25px) rotate(-18deg);
+}
+
+}
+/* =====================================
+   GLOWING PARTICLES
+===================================== */
+
+.particles{
+
+    position:absolute;
+
+    inset:0;
+
+    overflow:hidden;
+
+    pointer-events:none;
+
+    z-index:0;
+
+}
+
+.particles span{
+
+    position:absolute;
+
+    width:6px;
+
+    height:6px;
+
+    border-radius:50%;
+
+    background:#6ec6ff;
+
+    box-shadow:0 0 15px #6ec6ff;
+
+    animation:particleMove 12s linear infinite;
+
+}
+
+/* Random positions */
+
+.particles span:nth-child(1){top:10%;left:15%;animation-delay:0s;}
+.particles span:nth-child(2){top:30%;left:80%;animation-delay:2s;}
+.particles span:nth-child(3){top:70%;left:20%;animation-delay:4s;}
+.particles span:nth-child(4){top:50%;left:60%;animation-delay:1s;}
+.particles span:nth-child(5){top:80%;left:90%;animation-delay:3s;}
+.particles span:nth-child(6){top:15%;left:50%;animation-delay:5s;}
+.particles span:nth-child(7){top:65%;left:40%;animation-delay:6s;}
+.particles span:nth-child(8){top:45%;left:10%;animation-delay:7s;}
+.particles span:nth-child(9){top:90%;left:70%;animation-delay:8s;}
+.particles span:nth-child(10){top:25%;left:30%;animation-delay:9s;}
+
+@keyframes particleMove{
+
+    0%{
+        transform:translateY(0);
+        opacity:0;
+    }
+
+    20%{
+        opacity:4;
+    }
+
+    100%{
+        transform:translateY(-120px);
+        opacity:0;
+    }
+
+}
+.hero-graphics{
+
+    position:absolute;
+
+    inset:0;
+
+    overflow:hidden;
+
+    pointer-events:none;
+
+}
+
+.hero-svg{
+
+    position:absolute;
+
+    right:-80px;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    width:650px;
+
+    opacity:.18;
+
+    animation:floatHero 8s ease-in-out infinite;
+
+}
+
+@keyframes floatHero{
+
+    0%,100%{
+
+        transform:translateY(-50%);
+
+    }
+
+    50%{
+
+        transform:translateY(calc(-50% - 20px));
+
+    }
+
+}
+.molecule-left{
+
+    position:absolute;
+
+    left:50px;
+
+    top:120px;
+
+    width:140px;
+
+    opacity:.12;
+
+    animation:rotateSlow 20s linear infinite;
+
+}
+
+.dna-right{
+
+    position:absolute;
+
+    right:60px;
+
+    bottom:80px;
+
+    width:180px;
+
+    opacity:.15;
+
+    animation:floatHero 10s ease-in-out infinite;
+
+}
+
+@keyframes rotateSlow{
+
+    from{
+
+        transform:rotate(0deg);
+
+    }
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
